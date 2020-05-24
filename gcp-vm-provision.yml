@@ -74,7 +74,7 @@
     region: us-central1
     zone: us-central1-a
 - 
-  connection: ssh
+  connection: winrm
   hosts: new_instances
   name: "Manage new instances"
   roles: 
