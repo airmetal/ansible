@@ -73,7 +73,7 @@
     gcp_project: my-project
     region: us-central1
     zone: us-central1-a
-- 
+ - 
   connection: winrm
   hosts: new_instances
   name: "Manage new instances"
