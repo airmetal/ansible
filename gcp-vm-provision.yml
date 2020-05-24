@@ -18,7 +18,7 @@
         zone: "{{ zone }}"
       name: "create a disk"
       register: disk
-    - 
+   - 
       gcp_compute_network: 
         auth_kind: "{{ gcp_cred_kind }}"
         name: network-instance
