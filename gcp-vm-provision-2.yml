@@ -73,6 +73,3 @@
 - name: Manage new instances
   hosts: new_instances
   connection: ssh
-  roles:
-    - base_configuration
-    - production_server
