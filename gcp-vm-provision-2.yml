@@ -69,3 +69,11 @@
      wait_for: host={{ ipaddress }} port=22 delay=10 timeout=60
    - name: Add host to groupname
      add_host: hostname={{ ipaddress }} groupname=new_instances
+     
+- name: Manage new instances
+  hosts: new_instances
+  connection: ssh
+  sudo: True
+  roles:
+    - base_configuration
+    - production_server
