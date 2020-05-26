@@ -1,6 +1,10 @@
 - name: Create an instance
   hosts: localhost
   gather_facts: no
+  vars:
+      gcp_project: maya-demos
+      zone: "us-east1-b"
+      region: "us-east1"
   
   tasks:
    - name: create a disk
