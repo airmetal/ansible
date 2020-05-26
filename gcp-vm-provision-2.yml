@@ -2,9 +2,9 @@
   hosts: localhost
   gather_facts: no
   vars:
-      gcp_project: {{ GCE_PROJECT }}
+      gcp_project: {{ lookup(env, "GCE_PROJECT" }}
       gcp_cred_kind: serviceaccount
-      gcp_cred_file: {{ GCE_CREDENTIALS_FILE_PATH }}
+      gcp_cred_file: {{ lookup(env,"GCE_CREDENTIALS_FILE_PATH" }}
       zone: "us-east1-b"
       region: "us-east1"
   
