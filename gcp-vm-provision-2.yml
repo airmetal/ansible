@@ -1,12 +1,13 @@
+- name: Create an instance
   hosts: localhost
   gather_facts: no
-
+  
   tasks:
    - name: create a disk
      gcp_compute_disk:
          name: 'disk-instance'
          size_gb: 50
-         source_image: 'projects/centos-cloud/global/images/centos-8-v20200521'
+         source_image: 'projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts'
          zone: "{{ zone }}"
          project: "{{ gcp_project }}"
          auth_kind: "{{ gcp_cred_kind }}"
@@ -59,11 +60,11 @@
            - https://www.googleapis.com/auth/compute
      register: instance
 
-    - name: Wait for SSH to come up
-      wait_for: host={{ address.address }} port=22 delay=10 timeout=60
+   - name: Wait for SSH to come up
+     wait_for: host={{ address.address }} port=22 delay=10 timeout=60
 
-    - name: Add host to groupname
-      add_host: hostname={{ address.address }} groupname=new_instances
+   - name: Add host to groupname
+     add_host: hostname={{ address.address }} groupname=new_instances
 
 
 - name: Manage new instances
