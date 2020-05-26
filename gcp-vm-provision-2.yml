@@ -48,7 +48,7 @@
              - network: "{{ network }}"
                access_configs:
                  - name: 'External NAT'
-                   nat_ip: "{{ address }}"
+                   nat_ip: "{{ ipaddress }}"
                    type: 'ONE_TO_ONE_NAT'
          zone: "{{ zone }}"
          project: "{{ gcp_project }}"
