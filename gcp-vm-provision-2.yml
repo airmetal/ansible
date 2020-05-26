@@ -12,7 +12,7 @@
    - name: create a disk
      gcp_compute_disk:
          name: 'disk-instance'
-         size_gb: 10
+         size_gb: 20
          source_image: 'projects/centos-cloud/global/images/centos-8-v20200521'
          zone: "{{ zone }}"
          project: "{{ gcp_project }}"
