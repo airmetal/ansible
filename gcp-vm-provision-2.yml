@@ -67,4 +67,7 @@
      register: instance
    - name: Wait for SSH to come up
      wait_for_connection:
-       timeout: 180
+       timeout: 180       
+   -  debug:
+       msg: "GCP VM  successfully provisioned. Details: {{ instance.stdout }}
+       
