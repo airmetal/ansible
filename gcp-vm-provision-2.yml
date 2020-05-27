@@ -71,8 +71,6 @@
    - debug:
        msg: "GCP VM  successfully provisioned!"
    - name: get info on an instance
-     debug:
-       msg: "GCP VM  Details: "
      gcp_compute_instance_info:
        filters:
        - name = {{ instance.name }}
