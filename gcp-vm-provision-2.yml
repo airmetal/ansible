@@ -81,7 +81,7 @@
    - debug:
        msg: "GCP VM  successfully provisioned!"
    - debug:
-       var: hostvars['test-vm']
+       var: hostvars[ "{{ VM_name }}"]
  #  - name: get info on an instance
  #    gcp_compute_instance_info:
  #      filters:
