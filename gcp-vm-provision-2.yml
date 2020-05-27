@@ -69,5 +69,5 @@
      wait_for_connection:
        timeout: 180       
    -  debug:
-       msg: "GCP VM  successfully provisioned. Details: {{ instance.stdout }}
+       msg: "GCP VM  successfully provisioned. Details: {{ instance.stdout }}"
        
