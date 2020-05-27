@@ -68,7 +68,7 @@
    - name: Wait for SSH to come up
      wait_for_connection:
        timeout: 180       
-   -  debug:
+   - debug:
        msg: "GCP VM  successfully provisioned!"
    - name: get info on an instance
      debug:
