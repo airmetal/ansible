@@ -34,7 +34,7 @@
      register: network
    - name: create a address
      gcp_compute_address:
-         name: 'address-instance'
+         name: "{{ VM_name }}-ipaddr"
          region: "{{ region }}"
          project: "{{ gcp_project }}"
          auth_kind: "{{ gcp_cred_kind }}"
